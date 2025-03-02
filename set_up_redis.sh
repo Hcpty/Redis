@@ -9,8 +9,10 @@ sed -i -e 's/# aclfile \/etc\/redis\/users.acl/aclfile \/etc\/redis\/users.acl/'
 mkdir /usr/local/etc/redis/
 touch /usr/local/etc/redis/users.acl
 
-echo "Configure Redis users"
+echo "Configure the default user"
 echo 'user default on '$PASSWORD' ~* &* +@all' >> /usr/local/etc/redis/users.acl
+
+echo "Add the server user"
 echo 'user server on '$PASSWORD' ~* &* +@all' >> /usr/local/etc/redis/users.acl
 
 echo "Enable auto start"
