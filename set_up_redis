@@ -20,7 +20,7 @@ echo 'Add the server user'
 echo 'user server on '$PASSWORD' ~* &* +@all' >> /usr/local/etc/redis/users.acl
 
 echo 'Enable auto start'
-sysrc redis_enable='YES'
+sysrc redis_enable=YES
 
 echo 'Start Redis'
 service redis start
