@@ -4,6 +4,8 @@
 
 set -eux
 
+echo 'PASSWORD: '$PASSWORD
+
 echo 'Install Redis'
 pkg install databases/redis
 
